@@ -8,6 +8,7 @@ html {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -48,8 +49,24 @@ header {
 }
 
 .title-section {
-  text-align: center;
+  margin: 5px 0 20px 0;
+  font-size: 1.5rem;
+  /* text-align: center; */
   /* border: 1px solid rgb(73, 7, 228); */
+}
+
+.title-section h1 {
+  margin: 0;
+}
+
+.title-section ul {
+  font-family: "Abril Fatface", cursive;
+  padding: 0;
+  margin: 0;
+}
+
+.title-section li {
+  display: inline-block;
 }
 
 .search-section {
@@ -73,63 +90,117 @@ header {
 
 .main-nav {
   display: none;
-  max-width: 80vw;
-  /* border: 3px solid rgb(18, 224, 63); */
+  width: 100vw;
+  background-color: #000;
+  padding: 1rem;
 }
 
 .main-nav ul {
-  /* border: 3px solid rgb(235, 118, 8); */
-  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  font-family: "Teko", sans-serif;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1rem;
 }
 
 .main-nav li {
+  white-space: nowrap;
   display: inline-block;
-  /* border: 3px solid rgb(110, 4, 66); */
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: rgb(197, 44, 44);
+}
+
+.main-image-container {
+  /* width: 100%;
+  height: auto; */
+  width: 100vw;
+  height: 70vh;
+  background-image: url(../images/movie-posters-wallpaper-crop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  margin-bottom: 2rem;
 }
 
 .featured-content-heading {
   text-align: center;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  margin: 5% 10%;
+}
+
+.latest-reviews-section h2 {
+  text-align: center;
 }
 
 .featured-content {
-  /* width: 100px; */
-  /* height: 300px; */
-  /* background: cyan; */
+  margin-bottom: 4rem;
   /* border: 1px solid black; */
+  padding: 5% 0;
+}
+
+.featured-content h2 {
+  font-family: "Anton", sans-serif;
+}
+
+.featured-content p {
+  margin: 3rem 3rem 1.5rem;
+  font-family: "Titillium Web", sans-serif;
+  line-height: 2rem;
+}
+
+.featured-content a {
+  display: block;
   text-align: center;
-  font-size: 30px;
-  display: flex;
-  flex-direction: column;
+  text-decoration: none;
 }
 
-.featured {
-  border: 1px solid black;
-  background: rgba(196, 215, 30, 0.696);
-  flex-grow: 1;
-  min-width: 250px;
-  /* max-width: 40%; */
-  font-size: 14px;
-}
-
-img {
-  /* width: 100%; */
-  max-width: 40%;
-}
-
-.featured {
-  border: 1px solid black;
-  /* margin: 40px; */
-  display: grid;
+.featured-content a:hover,
+.featured-content a:focus {
+  text-decoration-line: underline;
 }
 
 .image-container {
-  /* max-width: 60%; */
-  background-color: coral;
-  /* aspect-ratio: 21/31; */
+  width: 60%;
+  aspect-ratio: 27/40;
+  background-size: cover;
+  box-shadow: 10px 10px 10px rgb(73, 71, 71);
 }
 
-img {
-  height: 100%;
+.black-adam {
+  background-image: url(../images/black-adam.jpg);
+}
+
+.black-widow {
+  background-image: url(../images/black-widow2.jpg);
+}
+
+.man-of-steel {
+  background-image: url(../images/man-of-steel-cool-poster-1.jpg);
+}
+
+.captain-america {
+  background-image: url(../images/captain-america.jpg);
+  background-position: center center;
+}
+
+.image-container {
+  margin: 2rem auto;
 }
 
 /* --------------------------------------------------- */
@@ -142,34 +213,22 @@ img {
   }
 
   .title-section {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .title-section ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .title-section li {
+    display: inline-block;
   }
 
   .main-nav {
     display: block;
-    margin: auto;
-    margin-bottom: 40px;
-  }
-
-  .main-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .main-nav li {
-    white-space: nowrap;
-  }
-
-  .main-nav a {
-    text-decoration: none;
-    color: black;
-  }
-
-  .main-nav a:hover,
-  .main-nav a:focus {
-    color: aquamarine;
+    margin-top: 2rem;
   }
 
   .dropdown-section {
@@ -180,11 +239,17 @@ img {
     display: none;
   }
 
-  .featured-content {
-    flex-direction: row;
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  img {
-    max-width: 50%;
+  .featured-content-heading {
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+  }
+
+  .featured-content {
+    margin-bottom: 8rem;
   }
 }
