@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image-container {
+  width: 40%;
+  aspect-ratio: 27/40;
+  margin: 0 auto;
+  background-size: cover;
+}
+
+.featured-content {
+  border: 1px solid black;
+}
+
+.black-adam {
+  background-image: url(../images/black-adam.jpg);
+}
+
+.black-widow {
+  background-image: url(../images/black-widow2.jpg);
+}
+
+.man-of-steel {
+  background-image: url(../images/man-of-steel-cool-poster-1.jpg);
+}
+
+.captain-america {
+  background-image: url(../images/captain-america.jpg);
+}
