@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 html {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -57,6 +61,7 @@ header {
 
 .title-section h1 {
   margin: 0;
+  visibility: hidden;
 }
 
 .title-section ul {
@@ -210,6 +215,7 @@ header {
 @media (min-width: 501px) {
   header {
     justify-content: center;
+    padding-bottom: 32px;
   }
 
   .title-section {
@@ -228,7 +234,6 @@ header {
 
   .main-nav {
     display: block;
-    margin-top: 2rem;
   }
 
   .dropdown-section {

@@ -6,6 +6,12 @@ tl.from("h1 *", {
   stagger: 0.1,
 });
 
+function displayTitle() {
+  let title = document.getElementById("title");
+  title.style.visibility = "visible";
+}
+setTimeout(displayTitle, 100);
+
 let sectionImg = document.querySelectorAll("section .featured-content");
 let sectionTxtArr = document.querySelectorAll("section p");
 
